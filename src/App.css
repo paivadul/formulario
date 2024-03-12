@@ -1,8 +1,13 @@
+label, input{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+button{
+  margin-top: 10px;
+}
 
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+  padding-left: 30px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

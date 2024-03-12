@@ -7,7 +7,7 @@ const Result = (props) => {
     // const { firstName, lastName, email, password, confirmPassword } = props.data;
 
     return <div>
-        <h1>Datos Cargados</h1>
+        <h1>Results</h1>
             <p>First Name: {firstName}</p>
             <p>Last Name: {lastName}</p>
             <p>Email: {email}</p>
