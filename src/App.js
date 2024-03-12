@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
 
-  const [state, setState] = useState({firstName:"", lastName:"", email:"", password:"", confirmPassword:""})
+  const [state, setState] = useState({firstName:"", lastName:"", email:"", password:"", confirmPassword:"", hasBeenSubmitted:false })
 
   return (
     <div className="App">

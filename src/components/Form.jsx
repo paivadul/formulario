@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 const Form = props => {
-
     const { input, setInput } = props;
+    const [hasBeenSubmitted, setHasBeenSubmitted] = useState(false);
 
     const onChange = e => {
         setInput({
@@ -11,8 +11,24 @@ const Form = props => {
         })
     };
 
-    return <form>
-        <h1>Complete el Formulario</h1>
+    const createUser = (e) => {
+        e.preventDefault();
+        const { firstName, lastName, email, password, confirmPassword} = input;
+        const newUser = { firstName, lastName, email, password, confirmPassword};
+        console.log("Welcome", newUser);
+        setHasBeenSubmitted(true);
+    };
+    
+    const formMessage = () => {
+        if( hasBeenSubmitted ) {
+	    return "Thank you for submitting the form!";
+	} else {
+	    return "Welcome, please submit the form";
+	}
+    };
+
+    return <form onSubmit={ createUser }>
+        <h3>{ formMessage() }</h3>
         <div>
             <label htmlFor='firstName'>First Name </label>
             <input onChange={onChange} type="text" name="firstName"/>
@@ -33,6 +49,7 @@ const Form = props => {
             <label htmlFor="confirmPassword">Confirm Password </label>
             <input onChange={onChange} type="password" name="confirmPassword" />
         </div>
+        <button type="submit">Submit</button>
     </form>
 };
 
