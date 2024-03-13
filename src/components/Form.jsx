@@ -74,27 +74,27 @@ const Form = (props) => {
             <div>
                 <label htmlFor='firstName'>First Name </label>
                 <input onChange={onChange} type="text" name="firstName" />
-                {errors.firstName && <span style={{ color: 'red' }}>{errors.firstName}</span>}
+                <p>{errors.firstName && <span style={{ color: 'red' }}>{errors.firstName}</span>}</p>
             </div>
             <div>
                 <label htmlFor="lastName">Last Name </label>
                 <input onChange={onChange} type="text" name="lastName" />
-                {errors.lastName && <span style={{ color: 'red' }}>{errors.lastName}</span>}
+                <p>{errors.lastName && <span style={{ color: 'red' }}>{errors.lastName}</span>}</p>
             </div>
             <div>
                 <label htmlFor="email">Email </label>
                 <input onChange={onChange} type="text" name="email" />
-                {errors.email && <span style={{ color: 'red' }}>{errors.email}</span>}
+                <p>{errors.email && <span style={{ color: 'red' }}>{errors.email}</span>}</p>
             </div>
             <div>
                 <label htmlFor="password">Password </label>
                 <input onChange={onChange} type="password" name="password" />
-                {errors.password && <span style={{ color: 'red' }}>{errors.password}</span>}
+                <p>{errors.password && <span style={{ color: 'red' }}>{errors.password}</span>}</p>
             </div>
             <div>
                 <label htmlFor="confirmPassword">Confirm Password </label>
                 <input onChange={onChange} type="password" name="confirmPassword" />
-                {errors.confirmPassword && <span style={{ color: 'red' }}>{errors.confirmPassword}</span>}
+                <p>{errors.confirmPassword && <span style={{ color: 'red' }}>{errors.confirmPassword}</span>}</p>
             </div>
             <button type="submit">Submit</button>
         </form>
